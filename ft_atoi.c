@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isstrlen.c                                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaliwan <mmaliwan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/18 10:16:32 by mmaliwan          #+#    #+#             */
-/*   Updated: 2023/03/18 10:16:32 by mmaliwan         ###   ########.fr       */
+/*   Created: 2023/03/24 01:04:33 by mmaliwan          #+#    #+#             */
+/*   Updated: 2023/03/24 01:04:33 by mmaliwan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *str)
+int ft_atoi(const char *str)
 {
-    size_t  i;
+    int i;
+    int d;
 
     i = 0;
-    while (str[i])
+    d = 1;
+
+    while (str[i] == '\0')
     {
+        str++;
+        if (str[i] >= 'a' && str[i] <= 'z')
+        {
+            i++;
+        }
+        else if (str[i] >= 'A' && str[i] <= 'Z')
+        {
+            i++;
+        }
+    }
+    if (str[i] >= '0' && str[i] <= '9')
+    {
+        return (str >= '0' && str <= '9');
         i++;
     }
-    return (i);
+    else
+    return (0);
 }
