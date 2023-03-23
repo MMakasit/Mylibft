@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isstrlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaliwan <mmaliwan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 23:06:49 by mmaliwan          #+#    #+#             */
-/*   Updated: 2023/02/17 23:06:49 by mmaliwan         ###   ########.fr       */
+/*   Created: 2023/03/18 10:16:32 by mmaliwan          #+#    #+#             */
+/*   Updated: 2023/03/18 10:16:32 by mmaliwan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+size_t  (const char *str)
 {
-	if (c >= '0' && c <= '9')
+    size_t  i;
+
+    i = 0;
+    while (str[i])
     {
-		return (1);
+        i++;
     }
-	return (0);
+    return (i);
 }
